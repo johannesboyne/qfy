@@ -97,6 +97,7 @@ Options:
   timezone
   unixtime
   username
+  objectId (MongoDB/BSON)
 ```
 
 ### Generator attributes

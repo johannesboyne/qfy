@@ -13,7 +13,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/peteraba/qfy/pkg/qfy"
+	"github.com/johannesboyne/qfy/pkg/qfy"
 	"github.com/tj/docopt"
 )
 

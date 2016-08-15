@@ -8,6 +8,8 @@ import (
 	"strings"
 	"sync"
 	"time"
+
+	"labix.org/v2/mgo/bson"
 )
 
 const (
@@ -166,6 +168,9 @@ func NewGenerator() *Generator {
 		},
 		"double": func(g *Generator, args []string, r *rand.Rand) (string, error) {
 			return strconv.FormatFloat(r.NormFloat64()*1000, 'f', 4, 64), nil
+		},
+		"objectId": func(g *Generator, args []string, r *rand.Rand) (string, error) {
+			return bson.NewObjectId().Hex(), nil
 		},
 		// Smartdouble returns a random double
 		// First argument will be interpreted as desired standard deviation
